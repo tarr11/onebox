@@ -12,7 +12,7 @@ module Onebox
 
       def url
         if match && match[:id]
-          _url = URI("http://www.amazon.#{tld}/gp/aw/d/" + URI::encode(match[:id]))
+          _url = URI("https://www.amazon.#{tld}/gp/aw/d/" + URI::encode(match[:id]))
           _url.scheme = URI(@url).scheme
           return _url.to_s
         end
